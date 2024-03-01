@@ -34,12 +34,26 @@ addLayer("p", {
         },
         12:{
             title: "Second GigaUpgrade",
-    description: "Double your point gain.",
+    description: "Increase point gain by GigaPrestiges",
     cost: new Decimal(3),
     effect() {
-        return player[this.layer].points.add(2).pow(0.75)
+        return player[this.layer].points.add(1).pow(0.75)
     },
     effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" },
+        },
+        13:{
+            title: "Third GigaUpgrade",
+    description: "Double your point gain.",
+    cost: new Decimal(5),
+    effect() {
+        return player.points.add(1).pow(0.15)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" },
+    gainMult() {
+        let mult = new Decimal(1)
+        if (hasUpgrade('p', 13)) mult = mult.times(upgradeEffect('p', 13))
+        return mult
+    },
         }
     },
 })
