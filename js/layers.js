@@ -34,7 +34,7 @@ addLayer("p", {
         },
         12:{
             title: "Second GigaUpgrade",
-    description: "Increase point gain by GigaPrestiges",
+    description: "Increase Point gain by GigaPrestiges",
     cost: new Decimal(3),
     effect() {
         return player[this.layer].points.add(1).pow(0.75)
@@ -43,7 +43,7 @@ addLayer("p", {
         },
         13:{
             title: "Third GigaUpgrade",
-    description: "Double your point gain.",
+    description: "Increase Point gain by Points.",
     cost: new Decimal(5),
     effect() {
         return player.points.add(1).pow(0.15)
