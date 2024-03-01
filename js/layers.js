@@ -30,12 +30,12 @@ addLayer("p", {
         11:{
             title: "First GigaUpgrade",
     description: "Double your point gain.",
-    cost: new Decimal(5),
+    cost: new Decimal(1),
         },
         12:{
             title: "Second GigaUpgrade",
     description: "Double your point gain.",
-    cost: new Decimal(20),
+    cost: new Decimal(3),
     effect() {
         return player[this.layer].points.add(1).pow(0.5)
     },
