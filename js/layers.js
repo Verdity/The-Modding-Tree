@@ -31,7 +31,7 @@ addLayer("p", {
             title: "First GigaUpgrade",
     description: "Double your point gain.",
     cost: new Decimal(5),
-        }
+        },
         12:{
             title: "Second GigaUpgrade",
     description: "Double your point gain.",
